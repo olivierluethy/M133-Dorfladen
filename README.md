@@ -1,5 +1,5 @@
 # M133 Projekt Dorfladen
-Das Kanban-Board Projekt von Olivier Lüthy
+Das Dorfladen Projekt von Olivier Lüthy
 
 ## Inbetriebnahme
 Hier wird beschrieben, was die Vorraussetzungen sind für das Projekt und wie man das Projekt starten kann
