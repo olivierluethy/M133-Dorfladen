@@ -1,8 +1,58 @@
-<%- await include('views/header.ejs', { title: 'Welcome' }) %>
-<h1>Welcome</h1>
-<p>Please enter your first name</p>
-<form action="/info" method="post">
-    <input type="text" name="first-name">
-    <input type="submit" value="Submit">
-</form>
+<%- await include('views/header.ejs', { title: 'Dorfladen' }) %>
+
+<button class="cart"><i class="fas fa-shopping-cart"></i></button>
+
+<div class="elements">
+    <div class="description" onclick="openElement(1)">
+        <img src="appenzeller.jpg" alt="Appenzeller"/>
+        <h2>Appenzeller Classic</h2>
+        <h2>CHF 2.7 <strike><font color="red">CHF 3.45</font></strike></h2>
+    </div>
+    <div class="description" onclick="openElement(2)">
+        <img src="eier.jpg" alt="Eier"/>
+        <h2>Eier</h2>
+        <h2>CHF 4.5 <strike><font color="red">CHF 5.4</font></strike></h2>
+    </div>
+    <div class="description" onclick="openElement(3)">
+        <img src="icedtea.jpg" alt="Icetea"/>
+        <h2>Iced Green Tea</h2>
+        <h2>CHF 7.5 <strike><font color="red">CHF 10.8</font></strike></h2>
+    </div>
+    <div class="description" onclick="openElement(4)">
+        <img src="kalbsbratwuerste.jpg" alt="Kalbsbratwuerste"/>
+        <h2>Kalbs-Bratwürste</h2>
+        <h2>CHF 8.25 <strike><font color="red">CHF 16.5</font></strike></h2>
+    </div>
+    <div class="description" onclick="openElement(5)">
+        <img src="krustenkranz.jpg" alt="Krustenkranz"/>
+        <h2>Krustenkranz</h2>
+        <h2>CHF 2 <strike><font color="red">CHF 2.3</font></strike></h2>
+    </div>
+    <div class="description" onclick="openElement(6)">
+        <img src="nektarinen.jpg" alt="Nektarinen"/>
+        <h2>Nektarinen gelb</h2>
+        <h2>CHF 3.6 <strike><font color="red">CHF 5.2</font></strike></h2>
+    </div>
+    <div class="description" onclick="openElement(7)">
+        <img src="olivenoel.jpg" alt="Olivenoel"/>
+        <h2>Olivenöl</h2>
+        <h2>CHF 14.35 <strike><font color="red">CHF 17.95</font></strike></h2>
+    </div>
+    <div class="description" onclick="openElement(8)">
+        <img src="senf.jpg" alt="Senf"/>
+        <h2>Senf</h2>
+        <h2>CHF 2.7 <strike><font color="red">CHF 3.4</font></strike></h2>
+    </div>
+    <div class="description" onclick="openElement(9)">
+        <img src="tomaten.jpg" alt="Tomaten"/>
+        <h2>Rispentomaten</h2>
+        <h2>CHF 2.65 <strike>CHF 3.1</strike></h2>
+    </div>
+    <div class="description" onclick="openElement(10)">
+        <img src="vanille_glace.jpg" alt="Vanille Glace"/>
+        <h2>Magunm Almond</h2>
+        <h2>CHF 7.9 <strike><font color="red">CHF 9.9</font></strike></h2>
+    </div>
+</div>
+
 <%- await include('views/footer.ejs') %>
