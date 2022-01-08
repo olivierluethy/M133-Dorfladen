@@ -29,6 +29,18 @@ router.post("/info", async (context) => {
     }
 });
 
+router.post("/details", async (context) => {
+    try {
+        const body = await context.request.body().value;
+        const fname = body.get("first-name");
+        context.response.body = await renderFileToString(Deno.cwd() + 
+            "/views/details.ejs", { firstName: fname, itemList: items });
+        context.response.type = "html";
+    
+    } catch (error) {
+        console.log(error);
+    }
+});
 const app = new Application();
 app.use(router.routes());
 app.use(router.allowedMethods());
